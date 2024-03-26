@@ -27,9 +27,21 @@ function buscaCortePorId(id) {
   return "Corte não encontrado";
 }
 
-function buscaBarbaPorId(id) {}
+function buscaBarbaPorId(id) {
+  let buscarBarba = barbearia.barbas;
+  for (let i = 0; i < buscarBarba.length; i++) {
+    if (buscarBarba[i].id === id) {
+      return buscarBarba[i];
+    }
+  }
+  return "Barba não encontrada";
+}
 
-function verificaStatusBarbearia() {}
+function verificaStatusBarbearia() {
+    if(barbearia.estaAberto){
+        return "Estamos abertos"
+    }return "Estamos fechados"
+}
 
 function retornaTodosCortes() {}
 
